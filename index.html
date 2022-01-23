@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/0c12c57d23.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Food App</title>
+  </head>
+  <body>
+    <!-- HEADER STARTS -->
+    <div id="overlay"></div>
+    <header>
+      <!-- NAV STARTS -->
+      <nav class="navbar">
+        <div class="logo-container">
+          <a href="/index.html"><h2 class="logo">Food App</h2></a>
+        </div>
+        <div class="nav-links">
+          <ul>
+            <li class="nav-link dropdown">
+              <a href="#">Diets<i class="fas fa-caret-down"></i></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a
+                    class="category-btn"
+                    data-category-type="dietLabels"
+                    data-category-value="Balanced"
+                    href="#"
+                    >Balanced</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="category-btn"
+                    data-category-type="dietLabels"
+                    data-category-value="High-Fiber"
+                    href="#"
+                    >High-Fiber</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="category-btn"
+                    data-category-type="dietLabels"
+                    data-category-value="Low-Carb"
+                    href="#"
+                    >Low-Carb</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="category-btn"
+                    data-category-type="dietLabels"
+                    data-category-value="Low-Fat"
+                    href="#"
+                    >Low-Fat</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="category-btn"
+                    data-category-type="dietLabels"
+                    data-category-value="Low-Sodium"
+                    href="#"
+                    >Low-Sodium</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-link dropdown">
+              <a href="#">Meal<i class="fas fa-caret-down"></i></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a
+                    class="category-btn"
+                    data-category-type="mealType"
+                    data-category-value="Breakfast"
+                    href="#"
+                    >Breakfast</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="category-btn"
+                    data-category-type="mealType"
+                    data-category-value="Lunch"
+                    href="#"
+                    >Lunch</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="category-btn"
+                    data-category-type="mealType"
+                    data-category-value="Dinner"
+                    href="#"
+                    >Dinner</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="category-btn"
+                    data-category-type="mealType"
+                    data-category-value="Snack"
+                    href="#"
+                    >Snack</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="category-btn"
+                    data-category-type="mealType"
+                    data-category-value="Teatime"
+                    href="#"
+                    >Teatime</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="hamburger"><i class="fas fa-bars"></i></div>
+      </nav>
+      <!-- NAV ENDS -->
+      <!-- SHOWCASE STARTS -->
+      <section class="showcase-section">
+        <div class="showcase-text">
+          <h2>
+            <img src="assets/images/salad.png" alt="food" />Time to eat<img
+              src="assets/images/salad.png"
+              alt="food"
+            />
+          </h2>
+          <h3>What are you in the mood for?</h3>
+        </div>
+        <div class="search-wrap">
+          <form class="search-box">
+            <input type="text" class="input" placeholder="Search food..." />
+            <button type="submit" class="btn btn-common">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+        </div>
+        <p class="instructions">
+          <strong>Instructions:</strong> Search a food above and we will try and
+          find some recipes for you. You can also use the dropdown menu in the
+          top right to search foods by category.
+        </p>
+      </section>
+      <!-- SHOWCASE ENDS -->
+    </header>
+    <section class="food-cards-section">
+      <!-- <div class="grid">
+      <div class="grid-item">
+        <div class="card">
+          <img class="card-img" src="assets/images/food1.jpg" />
+          <div class="card-content">
+            <h1 class="card-header">Food 1</h1>
+            <div class="cta">
+              <button class="card-btn ingredients-btn">Ingredients</button>
+              <a href="${food.recipe.url}" target="_blank"
+                ><button class="card-btn">Full Webpage</button></a
+              >
+            </div>
+            <p class="subheader">
+              <span>lunch/dinner</span>
+              <span class="dishType">|Breakfast</span>
+            </p>
+
+            <div class="card-text">
+              <ul>
+                <li><strong>Diet Type: </strong><span>High-Protein </span></li>
+                <li><strong>Cuisine Type: </strong><span>American </span></li>
+                <li><strong>Cautions: </strong><span>Fish </span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="grid-footer">320 calories</div> 
+      </div>
+      <div class="grid-item">
+        <div class="card">
+          <img class="card-img" src="assets/images/food1.jpg" />
+          <div class="card-content">
+            <h1 class="card-header">Food 1</h1>
+            <div class="cta">
+              <button class="card-btn ingredients-btn">Ingredients</button>
+              <a href="${food.recipe.url}" target="_blank"
+                ><button class="card-btn">Full Webpage</button></a
+              >
+            </div>
+            <p class="subheader">
+              <span>lunch/dinner</span>
+              <span class="dishType">|Breakfast</span>
+            </p>
+
+            <div class="card-text">
+              <ul>
+                <li><strong>Diet Type: </strong><span>High-Protein </span></li>
+                <li><strong>Cuisine Type: </strong><span>American </span></li>
+                <li><strong>Cautions: </strong><span>Fish </span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="grid-footer">320 calories</div> 
+      </div>
+      <div class="grid-item">
+        <div class="card">
+          <img class="card-img" src="assets/images/food1.jpg" />
+          <div class="card-content">
+            <h1 class="card-header">Food 1</h1>
+            <div class="cta">
+              <button class="card-btn ingredients-btn">Ingredients</button>
+              <a href="${food.recipe.url}" target="_blank"
+                ><button class="card-btn">Full Webpage</button></a
+              >
+            </div>
+            <p class="subheader">
+              <span>lunch/dinner</span>
+              <span class="dishType">|Breakfast</span>
+            </p>
+
+            <div class="card-text">
+              <ul>
+                <li><strong>Diet Type: </strong><span>High-Protein </span></li>
+                <li><strong>Cuisine Type: </strong><span>American </span></li>
+                <li><strong>Cautions: </strong><span>Fish </span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="grid-footer">320 calories</div> 
+      </div>
+      <div class="grid-item">
+        <div class="card">
+          <img class="card-img" src="assets/images/food1.jpg" />
+          <div class="card-content">
+            <h1 class="card-header">Food 1</h1>
+            <div class="cta">
+              <button class="card-btn ingredients-btn">Ingredients</button>
+              <a href="${food.recipe.url}" target="_blank"
+                ><button class="card-btn">Full Webpage</button></a
+              >
+            </div>
+            <p class="subheader">
+              <span>lunch/dinner</span>
+              <span class="dishType">|Breakfast</span>
+            </p>
+
+            <div class="card-text">
+              <ul>
+                <li><strong>Diet Type: </strong><span>High-Protein </span></li>
+                <li><strong>Cuisine Type: </strong><span>American </span></li>
+                <li><strong>Cautions: </strong><span>Fish </span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="grid-footer">320 calories</div> 
+      </div>
+      <div class="grid-item">
+        <div class="card">
+          <img class="card-img" src="assets/images/food1.jpg" />
+          <div class="card-content">
+            <h1 class="card-header">Food 1</h1>
+            <div class="cta">
+              <button class="card-btn ingredients-btn">Ingredients</button>
+              <a href="${food.recipe.url}" target="_blank"
+                ><button class="card-btn">Full Webpage</button></a
+              >
+            </div>
+            <p class="subheader">
+              <span>lunch/dinner</span>
+              <span class="dishType">|Breakfast</span>
+            </p>
+
+            <div class="card-text">
+              <ul>
+                <li><strong>Diet Type: </strong><span>High-Protein </span></li>
+                <li><strong>Cuisine Type: </strong><span>American </span></li>
+                <li><strong>Cautions: </strong><span>Fish </span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="grid-footer">320 calories</div> 
+      </div>
+      <div class="grid-item">
+        <div class="card">
+          <img class="card-img" src="assets/images/food1.jpg" />
+          <div class="card-content">
+            <h1 class="card-header">Food 1</h1>
+            <div class="cta">
+              <button class="card-btn ingredients-btn">Ingredients</button>
+              <a href="${food.recipe.url}" target="_blank"
+                ><button class="card-btn">Full Webpage</button></a
+              >
+            </div>
+            <p class="subheader">
+              <span>lunch/dinner</span>
+              <span class="dishType">|Breakfast</span>
+            </p>
+
+            <div class="card-text">
+              <ul>
+                <li><strong>Diet Type: </strong><span>High-Protein </span></li>
+                <li><strong>Cuisine Type: </strong><span>American </span></li>
+                <li><strong>Cautions: </strong><span>Fish </span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="grid-footer">320 calories</div> 
+      </div>
+      <div class="grid-item">
+        <div class="card">
+          <img class="card-img" src="assets/images/food1.jpg" />
+          <div class="card-content">
+            <h1 class="card-header">Food 1</h1>
+            <div class="cta">
+              <button class="card-btn ingredients-btn">Ingredients</button>
+              <a href="${food.recipe.url}" target="_blank"
+                ><button class="card-btn">Full Webpage</button></a
+              >
+            </div>
+            <p class="subheader">
+              <span>lunch/dinner</span>
+              <span class="dishType">|Breakfast</span>
+            </p>
+
+            <div class="card-text">
+              <ul>
+                <li><strong>Diet Type: </strong><span>High-Protein </span></li>
+                <li><strong>Cuisine Type: </strong><span>American </span></li>
+                <li><strong>Cautions: </strong><span>Fish </span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="grid-footer">320 calories</div> 
+      </div> -->
+    </section>
+    <footer>
+      <a href="https://www.flaticon.com/free-icons/salad" title="salad icons"
+        >Salad icons created by Freepik - Flaticon</a
+      >
+    </footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

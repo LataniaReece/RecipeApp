@@ -1,0 +1,16 @@
+footer {
+  bottom: 0;
+  color: #707070;
+  height: 2em;
+  left: 0;
+  position: fixed; /* OldProperty */
+  position: static; /* Updated Property */
+  font-size: small;
+  width: 100%;
+
+  a {
+    padding: 1rem;
+    color: $secondary-color;
+    text-decoration: underline;
+  }
+}

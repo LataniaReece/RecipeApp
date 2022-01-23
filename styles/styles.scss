@@ -1,0 +1,18 @@
+$primary-color: #467599;
+$secondary-color: #06d6a0;
+$primary-background-color: #fffcf9;
+$alert-color: #d56062;
+$dark-alert-color: #8f2729;
+$text-color: #333;
+$header-height: 5rem;
+
+$light-color: #f2e9e4;
+
+@import 'general';
+@import 'navbar';
+@import 'showcase';
+@import 'food-cards';
+@import 'modal';
+@import 'alert';
+@import 'pagination';
+@import 'footer';
